@@ -2,15 +2,13 @@ import React from "react";
 import Header from "../Header";
 import Cards from "../Cards";
 
-function HomePage() {
+function Home() {
   return (
-    <>
-      <div>
-        <Header/>
-        <Cards/>
-      </div>
-    </>
+    <div>
+      <Header />
+      <Cards />
+    </div>
   );
 }
 
-export default HomePage;
+export default Home;
