@@ -1,8 +1,9 @@
 import React from "react";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from './components/pages/Home';
 import EpisodeList from "./components/pages/EpisodeList";
 import Player from "./components/pages/Player" ;
+
 
 function App() {
   return(
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route>
           <Route path="/" element={<HomePage />} />
+          {/* <Route path="/admin" element={<AdminPage />}/> */}
           <Route path="/series/:id" element={<EpisodeList />} />
           <Route path="/watch/:id" element={<Player />} />
           <Route path="/watch/:id/:episodeId" element={<Player />} />

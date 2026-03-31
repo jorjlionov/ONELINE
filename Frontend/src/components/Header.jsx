@@ -1,16 +1,24 @@
 import React from "react";
-import logo from "../assets/logo/logo.webp"; // ← импорт
+import { Link } from "react-router-dom";
+import logo from '../assets/logo/logo.webp';
+import SearchBar from './SearchBar'
 
-function Header() {
+
+function Header({ onSearch }) {
   return (
-    <>
-      <div className="flex items-center justify-between w-full">
-        <img src={logo} alt="лого" className="w-64 h-auto ml-9" />
-        <h1 className="text-white text-right font-bold text-4xl m-6 p-4">
-          КАТАЛОГ
-        </h1>
+    <div className="flex items-center justify-between w-full px-4 py-4 pb-8 gap-4 mb-8">
+      <Link to= '/' className="shrink-0">
+        <img src={logo} alt="logo" className="w-48 h-auto"/>
+      </Link>
+
+      <div className="flex-1 max-w-2xl">
+        <SearchBar onSearch ={onSearch}/>
       </div>
-    </>
+
+      <h1 className="text-white text-right font-bolt text-3xl shrink-0 ml-3.5">
+        КАТАЛОГ
+      </h1>
+    </div>
   );
 }
 

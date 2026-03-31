@@ -1,12 +1,13 @@
 @import "tailwindcss";
 
-/* Отключаем горизонтальный скролл */
-html, body {
+
+/* html, body {
   overflow-x: hidden;
   max-width: 100%;
 }
 
-/* Учитываем padding в ширине */
 * {
   box-sizing: border-box;
-}
+  margin: 0;
+  padding: 0;
+} */
