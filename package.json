@@ -1,0 +1,13 @@
+{
+  "name": "oneline",
+  "version": "1.0.0",
+  "scripts": {
+    "install:all": "cd Frontend && npm install && cd ../Backend && npm install",
+    "dev": "concurrently \"cd Backend && npm run dev\" \"cd Frontend && npm run dev\"",
+    "build": "cd Frontend && npm run build",
+    "start": "cd Backend && npm start"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
